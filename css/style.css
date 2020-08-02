@@ -314,7 +314,6 @@ img {
 }
 
 .advantages-list {
-  /* list-style: none; */
   margin-top: 94px;
 }
 
@@ -390,6 +389,39 @@ img {
 
 .footer-btn:hover {
   background: #0b0b0b;
+}
+
+@media (orientation: landscape) {
+  .header-content__descr {
+    max-width: 100%;
+  }
+
+  .header-content__title {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    padding-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    padding: 15px 40px;
+  }
+
+  .menu-list {
+    height: 100vh;
+  }
+
+  .menu-list__link {
+    font-size: 30px;
+    line-height: 32px;
+    margin: 20px 10px 7px 0;
+    /* min-width: 100%;
+    display: block; */
+  }
 }
 
 @media (max-width: 1220px) {
