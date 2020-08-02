@@ -1,5 +1,5 @@
 $(function(){
-  $('.slider').slick({
+	$('.slider').slick({
 		arrows: false,
 		fade: true,
 		autoplay: 3000,
@@ -14,3 +14,28 @@ $(function(){
 		$('.menu').removeClass('active');
 	});
 });
+
+// dark-theme
+
+const themeBtn = document.querySelector('.switch_3');
+
+function initialState(themeName) {
+	localStorage.setItem('theme', themeName);
+	document.documentElement.className = themeName;
+}
+
+initialState('dark-theme');
+
+function toggleTheme() {
+	if (localStorage.getItem('theme') == 'dark-theme') {
+		initialState('light-theme');
+	} else {
+		initialState('dark-theme');
+	}
+}
+
+themeBtn.addEventListener('click', (e) => {
+	toggleTheme();
+});
+
+
